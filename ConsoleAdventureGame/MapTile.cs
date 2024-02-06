@@ -8,12 +8,12 @@ namespace ConsoleAdventureGame
 {
     internal class MapTile
     {
-        string roomName = "default";
-        string roomDescription = "default";
-        bool exitNorth;
-        bool exitSouth;
-        bool exitEast;
-        bool exitWest;
+        public string roomName = "default";
+        public string roomDescription = "default";
+        public bool exitNorth;
+        public bool exitSouth;
+        public bool exitEast;
+        public bool exitWest;
 
         public MapTile(string name, bool north, bool south, bool east, bool west, string desc)
         {
