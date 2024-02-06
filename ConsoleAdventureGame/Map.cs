@@ -14,7 +14,7 @@ namespace ConsoleAdventureGame
         public Map()
         {
             map = new MapTile[5, 5];
-            
+            AddRooms();
         }
 
         public void AddRooms()

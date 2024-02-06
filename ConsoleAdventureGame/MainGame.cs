@@ -12,6 +12,7 @@ namespace ConsoleAdventureGame
     {
         Map world;
         Player player;
+        MapTile currentTile;
 
         public MainGame() 
         {
@@ -27,8 +28,43 @@ namespace ConsoleAdventureGame
 
         private string DisplayLocation()
         {
-            MapTile currentTile = world.map[player.locationX, player.locationY];
+            currentTile = world.map[player.locationX, player.locationY];
             return currentTile.roomDescription;
+        }
+
+        private void HandleInput()
+        {
+            string input;
+            input = Console.ReadLine();
+            if (input.ToLower().Contains("north") || input.ToLower() == "n")
+            {
+                if(currentTile.exitNorth)
+                {
+                    player.locationY--;
+                }
+            }
+            if (input.ToLower().Contains("south") || input.ToLower() == "s")
+            {
+                if (currentTile.exitSouth)
+                {
+                    player.locationY++;
+                }
+            }
+            if (input.ToLower().Contains("east") || input.ToLower() == "e")
+            {
+                if (currentTile.exitEast)
+                {
+                    player.locationX--;
+                }
+            }
+            if (input.ToLower().Contains("west") || input.ToLower() == "w")
+            {
+                if (currentTile.exitWest)
+                {
+                    player.locationX++;
+                }
+            }
+
         }
 
         

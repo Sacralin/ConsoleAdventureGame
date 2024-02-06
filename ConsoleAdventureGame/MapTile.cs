@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleAdventureGame
+﻿namespace ConsoleAdventureGame
 {
     internal class MapTile
     {
@@ -17,12 +11,12 @@ namespace ConsoleAdventureGame
 
         public MapTile(string name, bool north, bool south, bool east, bool west, string desc)
         {
-            name = roomName;
-            desc = roomDescription;
-            north = exitNorth;
-            south = exitSouth;
-            east = exitEast;
-            west = exitWest;
+            roomName = name;
+            roomDescription = desc;
+            exitNorth = north;
+            exitSouth = south;
+            exitEast = east;
+            exitWest = west;
         }
 
     }
