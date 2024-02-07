@@ -8,6 +8,7 @@
         public bool exitSouth;
         public bool exitEast;
         public bool exitWest;
+        public string examineRoom = "You dont notice anything special.";
 
         public MapTile(string name, bool north, bool south, bool west, bool east, string desc)
         {
@@ -17,6 +18,18 @@
             exitSouth = south;
             exitEast = east;
             exitWest = west;
+            
+        }
+
+        public MapTile(string name, bool north, bool south, bool west, bool east, string desc, string examine)
+        {
+            roomName = name;
+            roomDescription = desc;
+            exitNorth = north;
+            exitSouth = south;
+            exitEast = east;
+            exitWest = west;
+            examineRoom = examine;
         }
 
     }

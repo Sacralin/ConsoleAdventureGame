@@ -26,21 +26,42 @@ namespace ConsoleAdventureGame
             map[1, 2] = new MapTile("Corridor of Echoes", false, false, true, true,
                 "You are in a long corridor lined with intricate carvings depicting scenes of ancient battles and mythical\n" +
                 "creatures. Every step you take reverberates through the narrow passageway, creating an eerie echo that\n" +
-                "seems to follow you.");
+                "seems to follow you.\n" +
+                "You see a Weary Adventurer here with you");
             map[2, 2] = new MapTile("Chamber of Serenity", true, true, true, true, 
                 "A tranquil chamber bathed in soft, golden light. Fragrant incense fills the air, and a gentle breeze rustles\n" +
                 "through the colorful curtains that hang from the windows. It's a peaceful respite from the dangers lurking\n" +
                 "in the temple's depths.");
             //go north to jump puzzle
-            map[2, 1] = new MapTile("jump room", true, true, false, false, "jump from this room to jump room 2");
-            map[2, 0] = new MapTile("jump room2", false, false, true, false, "cant go back to jump room 1 from here so go round");
-            map[1, 0] = new MapTile("backroom1 jump puzzle", false, true, false, true, "place a lever or something in this room to interact with");
-            map[1, 1] = new MapTile("backroom2 jump puzzle", false, true, false, true, "go south from here to go back to the old man (one way trip)");
+            map[2, 1] = new MapTile("Precarious Chasm", true, true, false, false, 
+                "Before you stretches a gaping chasm, its depths shrouded in darkness. On the other side,\n" +
+                "a distant platform beckons, adorned with ancient runes and mysterious symbols.\n" +
+                "The distance between you and the platform seems daunting, and the gap appears to be too wide to jump safely.",
+                "Should you attempt the jump, risking life and limb for the promise of what lies beyond?\n" +
+                "Or is there another, safer path you could take? Maybe the Weary Adventurer knows of a safer path.");
+            map[2, 0] = new MapTile("Triumph's Landing", false, false, true, false,
+                "Within this vast chamber, adorned with ancient murals, you land safely on the distant platform.\n" +
+                "Relief floods through you as you realize your leap of faith was successful. You quickly realise \n" +
+                "you cannot make the jump back, igniting triumphant determination to face what lies ahead.");
+            map[1, 0] = new MapTile("Dimly lit chamber", false, true, false, true, 
+                "In this dimly lit chamber, you discover an ancient mechanism hidden within the walls.\n" +
+                "As you approach, you notice a lever protruding from the stone, covered in dust and cobwebs.");
+            map[1, 1] = new MapTile("Whispering Chamber", true, true, false, false,
+                "As you step into this chamber, your eyes are drawn to the subtle flicker of torchlight illuminating\n" +
+                "a hidden door on the southern wall. The room is dimly lit, with shadows dancing along the rough stone floor.");
             //go east to door puzzle
-            map[3, 2] = new MapTile("Exit Room", false, false, true, false, "opens when both levers are pulled"); // set the east to true when the door is open
+            map[3, 2] = new MapTile("Vault of Secrets", false, false, true, false, 
+                "Within the heart of the temple lies the Vault of Secrets, a chamber shrouded in mystery and guarded by\n" +
+                "ancient mechanisms. At the far end of the room stands a massive stone door, adorned with intricate\n" +
+                "carvings and sealed shut for centuries.");
             //go south to crouch puzzle
-            map[2, 3] = new MapTile("crouch room", true, false, false, true, "you can crouch to go east from here");
-            map[3, 3] = new MapTile("crouch room interactable", false, false, true, false, "place an interactable item in this room");
+            map[2, 3] = new MapTile("Hidden Passage", true, false, false, false,
+                "This room appears to be a dead end, with solid walls stretching to the ceiling.",
+                "Upon closer inspection, you notice a narrow gap near the floor, partially obscured by overgrown vines and rubble.\n" +
+                "The space is just tall enough for a person to crouch and squeeze through.");
+            map[3, 3] = new MapTile("Hall of Enigmas", false, false, true, false, 
+                "Within this enigmatic hall, adorned with intricate glyphs and mysterious symbols, you uncover a peculiar pedestal.\n" +
+                "At its center rests a small, unassuming button, its surface worn with age");
             
             
             
