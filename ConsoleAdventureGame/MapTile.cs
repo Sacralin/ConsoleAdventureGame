@@ -9,7 +9,7 @@
         public bool exitEast;
         public bool exitWest;
 
-        public MapTile(string name, bool north, bool south, bool east, bool west, string desc)
+        public MapTile(string name, bool north, bool south, bool west, bool east, string desc)
         {
             roomName = name;
             roomDescription = desc;

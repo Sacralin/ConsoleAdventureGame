@@ -8,7 +8,12 @@ namespace ConsoleAdventureGame
         {
             MainGame game = new MainGame();
 
-            game.Run();
+            while (true)
+            {
+                game.Run();
+                
+            }
+           
         }
 
 
