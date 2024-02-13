@@ -36,8 +36,16 @@ namespace ConsoleAdventureGame
         {
             Console.WriteLine(DisplayLocation());
             HandleQuests();
+
+            if (player.locationX == 4 && player.locationY == 2)
+            {
+                Environment.Exit(0);
+            }
+
             HandleInput();
+
             
+
         }
 
         private string DisplayLocation()
@@ -153,6 +161,8 @@ namespace ConsoleAdventureGame
                 {
                     Console.WriteLine(noExit);
                 }
+
+                
                 
             }
         }

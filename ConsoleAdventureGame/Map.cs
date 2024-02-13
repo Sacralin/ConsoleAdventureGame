@@ -33,7 +33,7 @@ namespace ConsoleAdventureGame
                 "through the colorful curtains that hang from the windows. It's a peaceful respite from the dangers lurking\n" +
                 "in the temple's depths.");
             //go north to jump puzzle
-            map[2, 1] = new MapTile("Precarious Chasm", true, true, false, false, 
+            map[2, 1] = new MapTile("Precarious Chasm", false, true, false, false, 
                 "Before you stretches a gaping chasm, its depths shrouded in darkness. On the other side,\n" +
                 "a distant platform beckons, adorned with ancient runes and mysterious symbols.\n" +
                 "The distance between you and the platform seems daunting, and the gap appears to be too wide to jump safely.",
@@ -54,6 +54,7 @@ namespace ConsoleAdventureGame
                 "Within the heart of the temple lies the Vault of Secrets, a chamber shrouded in mystery and guarded by\n" +
                 "ancient mechanisms. At the far end of the room stands a massive stone door, adorned with intricate\n" +
                 "carvings and sealed shut for centuries.");
+            map[4, 2] = new MapTile("Dans Ending", false, false, false, false, "An ending as requested by Dan, plus a load of treasure for him\n *smiley face*");
             //go south to crouch puzzle
             map[2, 3] = new MapTile("Hidden Passage", true, false, false, false,
                 "This room appears to be a dead end, with solid walls stretching to the ceiling.",
